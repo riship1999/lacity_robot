@@ -109,12 +109,12 @@ python -m src.main -h
 ### 3.2 Happy‑path (add multiple items and fully checkout)
 **Windows (single line):**
 ```powershell
-python -m src.main --products "Sauce Labs Backpack, Sauce Labs Bike Light" --add-to-cart --checkout --first-name Heenal --last-name Patel --postal 95050 --quiet
+python -m src.main --products "Sauce Labs Backpack, Sauce Labs Bike Light" --add-to-cart --checkout --first-name Rishi --last-name Patel --postal 95050 --quiet
 ```
 
 **macOS/Linux:**
 ```bash
-python -m src.main --products "Sauce Labs Backpack, Sauce Labs Bike Light" --add-to-cart --checkout --first-name Heenal --last-name Patel --postal 95050 --quiet
+python -m src.main --products "Sauce Labs Backpack, Sauce Labs Bike Light" --add-to-cart --checkout --first-name Rishi --last-name Patel --postal 95050 --quiet
 ```
 
 **Expected CLI output (shape):**
@@ -125,7 +125,7 @@ SUCCESS: Added 'Sauce Labs Backpack' to cart
 SUCCESS: Added 'Sauce Labs Bike Light' to cart
 CART: total_items=2
 CART: items=[Sauce Labs Backpack; Sauce Labs Bike Light]
-CHECKOUT: info_submitted=Heenal Patel 95050
+CHECKOUT: info_submitted=Rishi Patel 95050
 CHECKOUT: item_total=$39.98
 CHECKOUT: tax=$3.20
 CHECKOUT: total=$43.18
@@ -139,7 +139,7 @@ ORDER: success=Thank you for your order!
 ### 3.3 Invalid item (graceful NOTFOUND + auto‑skip checkout)
 Command:
 ```powershell
-python -m src.main --products "Sauce Labs Light" --add-to-cart --checkout --first-name Heenal --last-name Patel --postal 95050 --quiet
+python -m src.main --products "Sauce Labs Light" --add-to-cart --checkout --first-name Rishi --last-name Patel --postal 95050 --quiet
 ```
 Expected output:
 ```
@@ -256,12 +256,12 @@ pytest -q -k "smoke" --maxfail=1
 
 **Happy path (2 items, full checkout)**
 ```powershell
-python -m src.main --products "Sauce Labs Backpack, Sauce Labs Bike Light" --add-to-cart --checkout --first-name Heenal --last-name Patel --postal 95050 --quiet
+python -m src.main --products "Sauce Labs Backpack, Sauce Labs Bike Light" --add-to-cart --checkout --first-name Rishi --last-name Patel --postal 95050 --quiet
 ```
 
 **Invalid item (clean NOTFOUND + skip checkout)**
 ```powershell
-python -m src.main --products "Sauce Labs Light" --add-to-cart --checkout --first-name Heenal --last-name Patel --postal 95050 --quiet
+python -m src.main --products "Sauce Labs Light" --add-to-cart --checkout --first-name Rishi --last-name Patel --postal 95050 --quiet
 ```
 
 **Missing checkout field (clean error)**
