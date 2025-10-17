@@ -1,4 +1,4 @@
-# LA City SWE Intern — Part 1
+
 **Robot Driver (Foundational Skills) — Playwright + Python**
 
 This repository contains a robust Playwright-based browser automation that completes an end‑to‑end shopping flow on the demo site **SauceDemo** (login → find products → add to cart → view cart → checkout → totals → finish). It is engineered for **deterministic output**, **clean error handling**, and **automated grading**.
