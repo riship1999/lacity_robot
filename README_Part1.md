@@ -1,7 +1,7 @@
 
 **Robot Driver (Foundational Skills) — Playwright + Python**
 
-This repository contains a robust Playwright-based browser automation that completes an end‑to‑end shopping flow on the demo site **SauceDemo** (login → find products → add to cart → view cart → checkout → totals → finish). It is engineered for **deterministic output**, **clean error handling**, and **automated grading**.
+This repository contains a robust Playwright-based browser automation that completes an end‑to‑end shopping flow on the demo site **SauceDemo** (login → find products → add to cart → view cart → checkout → totals → finish). It is engineered for **deterministic output**, **clean error handling**.
 
 > The same driver pattern can be adapted to other sites by adjusting selectors; SauceDemo is used here as a stable public target for evaluation.
 
@@ -134,7 +134,7 @@ ORDER: success=Thank you for your order!
 
 > Notes
 > - Prices/tax can vary slightly on the site; formats stay the same.
-> - `--quiet` prints only deterministic results (great for graders). Omit it for debug logs.
+> - `--quiet` prints only deterministic results. Omit it for debug logs.
 
 ### 3.3 Invalid item (graceful NOTFOUND + auto‑skip checkout)
 Command:
@@ -177,7 +177,6 @@ On any failure (NOTFOUND or errors), the program saves:
 - Full‑page **screenshot**: `artifacts/YYYYMMDD_HHMMSS_*.png`
 - Page **HTML**: `artifacts/YYYYMMDD_HHMMSS_*.html`
 
-These are invaluable for graders and debugging.
 
 ---
 
